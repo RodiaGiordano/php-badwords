@@ -4,6 +4,7 @@ $text_input = $_GET["text"];
 $censored_word = $_GET["censored_word"];
 
 
+
 ?>
 
 <!DOCTYPE html>
@@ -25,7 +26,7 @@ $censored_word = $_GET["censored_word"];
     <p>
         <?php echo $censored_word ?>
     </p>
-    <sub>Il testo contiene   caratteri</sub>
+    <sub>Il testo contiene <?php echo(strlen(trim($text_input))) ?> caratteri</sub>
 
     
 </body>
