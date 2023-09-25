@@ -15,22 +15,42 @@ $text_censored_character_count = strlen(trim($censored_text));
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- js -->
+    <script src="script.js" defer></script>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script></script>
     <title>Document</title>
 </head>
 <body>
-    <h2>Il testo che ha inserito è:</h2>
-    <p>
-        <?php echo $text_input ?>
-    </p>
+    <main id="app">
+
+        <h2>Il testo che ha inserito è:</h2>
+        <p>
+            <?php echo $text_input ?>
+        </p>
         <sub>Il testo contiente <?php echo($text_character_count) ?> caratteri </sub>
+        
+        
+        <h2>Il testo censurato è:</h2>
+        <p v-if="show"><?php echo $text_input ?></p>
 
-    
-    <h2>Il testo censurato è:</h2>
-    <p>
-        <?php echo $censored_text ?>
-    </p>
-    <sub>Il testo contiene <?php echo($text_censored_character_count) ?> caratteri</sub>
+        <p v-else>
+            <?php echo $censored_text ?>
+        </p>
 
+
+
+        <sub v-if="show" id="prova">Il testo contiene <?php echo($text_character_count) ?> caratteri</sub>
+        <sub v-else id="prova">Il testo contiene <?php echo($text_censored_character_count) ?> caratteri</sub>
+        <br>
+        <button id="show" @click="showWord">Mostra la censura</button>
+
+        
+        
+    </main>
+
+   
     
 </body>
 </html>
