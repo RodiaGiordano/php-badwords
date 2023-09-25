@@ -13,8 +13,10 @@ $password = $_GET["password"];
     <title>Document</title>
 </head>
 <body>
+    <h2>Il nome da te scelto è:</h2>
     <?php echo $name ?>
     
+    <h2>la password da te scelta è</h2>
     <?php echo $password ?>
     
 </body>
