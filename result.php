@@ -1,7 +1,8 @@
 <?php
 
-$name = $_GET["name"];
-$password = $_GET["password"];
+$text_input = $_GET["text"];
+$censored_word = $_GET["censored_word"];
+
 
 ?>
 
@@ -13,11 +14,19 @@ $password = $_GET["password"];
     <title>Document</title>
 </head>
 <body>
-    <h2>Il nome da te scelto è:</h2>
-    <?php echo $name ?>
+    <h2>Il testo che ha inserito è:</h2>
+    <p>
+        <?php echo $text_input ?>
+    </p>
+        <sub>Il testo contiente   caratteri </sub>
+
     
-    <h2>la password da te scelta è</h2>
-    <?php echo $password ?>
+    <h2>Il testo censurato è:</h2>
+    <p>
+        <?php echo $censored_word ?>
+    </p>
+    <sub>Il testo contiene   caratteri</sub>
+
     
 </body>
 </html>
