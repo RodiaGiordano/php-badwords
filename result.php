@@ -44,7 +44,7 @@ $text_censored_character_count = strlen(trim($censored_text));
         <sub v-if="show" id="prova">Il testo contiene <?php echo($text_character_count) ?> caratteri</sub>
         <sub v-else id="prova">Il testo contiene <?php echo($text_censored_character_count) ?> caratteri</sub>
         <br>
-        <button id="show" @click="showWord">Mostra la censura</button>
+        <button id="show" @mousedown="showWord" @mouseup="prova">Tieni premuto per mostrare</button>
 
         
         

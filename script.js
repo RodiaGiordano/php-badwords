@@ -9,7 +9,11 @@ createApp({
 
   methods: {
     showWord() {
-      this.show = this.show ? false : true;
+      this.show = true;
+    },
+
+    prova() {
+      this.show = false;
     },
   },
 }).mount("#app");
